@@ -1,0 +1,61 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "INSERT INTO sessions\n    ( did, handle, access_jwt, refresh_jwt )\nVALUES\n    ( $1, $2, $3, $4 )\nON CONFLICT (did)\n    DO UPDATE SET\n          handle = $2,\n          access_jwt = $3,\n          refresh_jwt = $4,\n          updated_at = NOW()\nRETURNING *;",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "did",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 2,
+        "name": "handle",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 3,
+        "name": "access_jwt",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 4,
+        "name": "refresh_jwt",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 5,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 6,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Varchar",
+        "Varchar",
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "4165d5715b9a01c8e69737b275ab2f7d2169b880467cf800a3019c32c7ece1b7"
+}

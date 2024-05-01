@@ -1,0 +1,15 @@
+[package]
+name = "mastodon-server-types"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.4"
+axum_typed_multipart = "0.11.0"
+chrono = "0.4.34"
+serde = { version = "1", features = ["derive"] }
+
+[features]
+axum_typed_multipart = []

@@ -1,0 +1,76 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "SELECT * FROM accounts WHERE id = $1",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int8"
+      },
+      {
+        "ordinal": 1,
+        "name": "did",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 2,
+        "name": "avatar",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 3,
+        "name": "banner",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 4,
+        "name": "followers_count",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 5,
+        "name": "follows_count",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 6,
+        "name": "posts_count",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 7,
+        "name": "description",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 8,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 9,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int8"
+      ]
+    },
+    "nullable": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "d767aed5aed104bf81708f43b22dcd9afc62c1eb79daa79852f84f9d7cc24ba6"
+}

@@ -1,0 +1,3 @@
+[workspace]
+members = ["mastodon-server-types", "sky-bridge-backend"]
+resolver = "2"

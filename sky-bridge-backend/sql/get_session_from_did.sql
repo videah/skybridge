@@ -1,0 +1,1 @@
+SELECT * FROM sessions WHERE did = $1

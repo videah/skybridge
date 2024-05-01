@@ -1,0 +1,78 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "INSERT INTO accounts (id, did, avatar)\nVALUES ($1, $2, $3)\nON CONFLICT (did)\n    DO UPDATE SET avatar     = $3,\n                  updated_at = NOW()\nRETURNING *;",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int8"
+      },
+      {
+        "ordinal": 1,
+        "name": "did",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 2,
+        "name": "avatar",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 3,
+        "name": "banner",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 4,
+        "name": "followers_count",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 5,
+        "name": "follows_count",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 6,
+        "name": "posts_count",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 7,
+        "name": "description",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 8,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 9,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int8",
+        "Varchar",
+        "Varchar"
+      ]
+    },
+    "nullable": [
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false
+    ]
+  },
+  "hash": "977fd04aa53dedd8adb856427602b906c7a4e19f2533d036b42b838b1f2bb641"
+}

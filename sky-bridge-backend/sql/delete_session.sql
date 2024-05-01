@@ -1,0 +1,1 @@
+DELETE from sessions WHERE did = $1;

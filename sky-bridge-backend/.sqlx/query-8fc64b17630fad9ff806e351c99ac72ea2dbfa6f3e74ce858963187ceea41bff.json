@@ -1,0 +1,58 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "SELECT * FROM sessions WHERE did = $1",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4"
+      },
+      {
+        "ordinal": 1,
+        "name": "did",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 2,
+        "name": "handle",
+        "type_info": "Varchar"
+      },
+      {
+        "ordinal": 3,
+        "name": "access_jwt",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 4,
+        "name": "refresh_jwt",
+        "type_info": "Text"
+      },
+      {
+        "ordinal": 5,
+        "name": "created_at",
+        "type_info": "Timestamptz"
+      },
+      {
+        "ordinal": 6,
+        "name": "updated_at",
+        "type_info": "Timestamptz"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "8fc64b17630fad9ff806e351c99ac72ea2dbfa6f3e74ce858963187ceea41bff"
+}

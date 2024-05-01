@@ -1,0 +1,46 @@
+[package]
+name = "sky-bridge-backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+atrium-api = { version = "0.16.0", features = ["tokio"] }
+atrium-xrpc-client = { version = "0.2.0", default-features = false, features = ["reqwest-rustls"] }
+askama = { version = "0.12.1", features = ["with-axum"] }
+askama_axum = "0.4.0"
+axum = { version = "0.7.4", features = ["macros"] }
+clap = { version = "4.4.10", features = ["derive", "env"] }
+tokio = { version = "1.36.0", features = ["full"] }
+futures = "0.3.30"
+thiserror = "1.0.57"
+serde = { version = "1.0.196", features = ["derive"] }
+anyhow = "1.0.79"
+dotenv = "0.15.0"
+env_logger = "0.11.2"
+log = "0.4.20"
+sqlx = { version = "0.7", features = ["runtime-tokio", "tls-rustls", "postgres", "chrono", "json", "uuid"] }
+mastodon-server-types = { path = "../mastodon-server-types", features = ["axum_typed_multipart"] }
+tower = "0.4.13"
+oxide-auth-axum = "0.4.0"
+tracing-subscriber = "0.3.18"
+tracing = "0.1.40"
+tower-http = { version = "0.5.1", features = ["trace"] }
+async-trait = "0.1.77"
+axum_typed_multipart = "0.11.0"
+data-encoding = "2.5.0"
+rand = "0.8.5"
+hex = "0.4.3"
+chrono = { version = "0.4.34", features = ["serde"] }
+ring = "0.17.8"
+serde_json = "1.0.113"
+axum_thiserror = "0.1.0"
+serde-aux = "4.4.0"
+co-orm = { version = "0.3.3", default-features = false, features = ["postgres"] }
+atrium-xrpc = "0.9.0"
+ux = "0.1.5"
+snowdon = { version = "0.2.0", features = ["serde", "lock-free"] }
+http = "1.0.0"
+headers = "0.4.0"
+html-escape = "0.2.13"
