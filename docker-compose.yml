@@ -19,6 +19,8 @@ services:
       - SKYBRIDGE_SHOW_INDEX=false
       # Allow backfilling/scrolling on timelines? (can cause issues on instances under heavy load)
       - SKYBRIDGE_ALLOW_BACKFILL=true
+      # Allow using IPv4 instead of IPv6
+      - USE_IPV4 = false
 
 volumes:
   skybridge:
