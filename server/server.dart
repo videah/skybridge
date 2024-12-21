@@ -49,7 +49,8 @@ import '../routes/.well-known/nodeinfo.dart' as well_known_nodeinfo;
 import '../routes/_middleware.dart' as middleware;
 
 void main() async {
-  final address = InternetAddress.anyIPv6;
+  var useIPv4 = Platform.environment['USE_IPV4']?? 'false';
+  final address = useIPv4.toLowerCase() == false ? InternetAddress.anyIPv6 : InternetAddress.anyIPv4;
   final port = int.parse(Platform.environment['PORT'] ?? '8080');
   await entrypoint.init(address, port);
   createServer(address, port);
