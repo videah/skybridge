@@ -67,6 +67,8 @@ You can use the [docker-compose.yml](docker-compose.yml) file in the root of the
 Simply change the environment variables in the file, and tweak it to suit your setup. You probably want to stick a reverse proxy
 like [nginx](https://nginx.org) or [caddy](https://caddyserver.com) in front of it.
 
+Please note that by default, the web server runs on port 8080, and uses HTTP when setting up your reverse proxy.
+
 ### Fly.io
 The public instance of SkyBridge is hosted on [Fly.io](https://fly.io). For a single user it is likely possible to
 host an instance here for free. A [fly.toml](fly.toml) file is included in the root of the project to help you get started.
